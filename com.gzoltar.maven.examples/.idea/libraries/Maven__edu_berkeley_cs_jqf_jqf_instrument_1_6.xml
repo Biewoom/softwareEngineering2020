@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: edu.berkeley.cs.jqf:jqf-instrument:1.6">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.m2/repository/edu/berkeley/cs/jqf/jqf-instrument/1.6/jqf-instrument-1.6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.m2/repository/edu/berkeley/cs/jqf/jqf-instrument/1.6/jqf-instrument-1.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.m2/repository/edu/berkeley/cs/jqf/jqf-instrument/1.6/jqf-instrument-1.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

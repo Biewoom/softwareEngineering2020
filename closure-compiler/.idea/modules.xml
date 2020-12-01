@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/closure-compiler.iml" filepath="$PROJECT_DIR$/closure-compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/externs/closure-compiler-externs.iml" filepath="$PROJECT_DIR$/externs/closure-compiler-externs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/closure-compiler-gwt.iml" filepath="$PROJECT_DIR$/closure-compiler-gwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/closure-compiler-linter.iml" filepath="$PROJECT_DIR$/closure-compiler-linter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/closure-compiler-main.iml" filepath="$PROJECT_DIR$/closure-compiler-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/closure-compiler-parent.iml" filepath="$PROJECT_DIR$/closure-compiler-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/closure-compiler-unshaded.iml" filepath="$PROJECT_DIR$/closure-compiler-unshaded.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Copyright (C) 2020 GZoltar contributors.
-
   This file is part of GZoltar.
-
   GZoltar is free software: you can redistribute it and/or modify it under the terms of the GNU
   Lesser General Public License as published by the Free Software Foundation, either version 3 of
   the License, or (at your option) any later version.
-
   GZoltar is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
   the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser
   General Public License for more details.
-
   You should have received a copy of the GNU Lesser General Public License along with GZoltar. If
   not, see <https://www.gnu.org/licenses/>.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.gzoltar.maven.examples</groupId>
@@ -28,10 +24,34 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jdk.version>1.6</jdk.version>
+    <jdk.version>1.8</jdk.version>
   </properties>
 
   <dependencies>
+    <!-- SketchFix -->
+    <dependency>
+      <groupId>com.sketch</groupId>
+      <artifactId>com.sketch.4j</artifactId>
+      <version>1.0.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/../com.sketchFix.test/lib/Sketch4J.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.sketch</groupId>
+      <artifactId>com.sketch.fix</artifactId>
+      <version>1.0.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/../com.sketchFix.test/lib/SketchFix.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.sketch</groupId>
+      <artifactId>com.javaparse</artifactId>
+      <version>1.0.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/../com.sketchFix.test/lib/javaparser-core-3.6.7.jar</systemPath>
+    </dependency>
+
+    <!-- Gzoltar -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -52,11 +72,58 @@
       <scope>system</scope>
       <systemPath>${project.basedir}/../com.gzoltar.cli/target/com.gzoltar.cli-1.7.3-SNAPSHOT-jar-with-dependencies.jar</systemPath>
     </dependency>
+    <!-- JQF && pholse -->
+    <dependency>
+      <groupId>edu.berkeley.cs.jqf</groupId>
+      <artifactId>jqf</artifactId>
+      <version>1.6</version>
+      <type>pom</type>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>edu.berkeley.cs.jqf</groupId>
+      <artifactId>jqf-fuzz</artifactId>
+      <version>1.6</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.pholser</groupId>
+      <artifactId>junit-quickcheck</artifactId>
+      <version>0.4</version>
+      <type>pom</type>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.pholser</groupId>
+      <artifactId>junit-quickcheck-generators</artifactId>
+      <version>0.7</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.pholser</groupId>
+      <artifactId>junit-quickcheck-core</artifactId>
+      <version>0.9</version>
+      <scope>test</scope>
+    </dependency>
+
+
   </dependencies>
 
   <build>
     <defaultGoal>package</defaultGoal>
     <plugins>
+      <!-- jqf -->
+      <plugin>
+        <groupId>edu.berkeley.cs.jqf</groupId>
+        <artifactId>jqf-maven-plugin</artifactId>
+        <version>1.6</version>
+      </plugin>
+
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -70,7 +137,7 @@
       <plugin>
         <groupId>com.gzoltar</groupId>
         <artifactId>com.gzoltar.maven</artifactId>
-        <version>1.7.3-SNAPSHOT</version>
+        <version>1.7.2</version>
         <executions>
           <execution>
             <id>fl-report</id>
@@ -122,10 +189,10 @@
       Custom test case executor
     -->
     <profile>
-      <id>custom</id>
+      <id>calendar</id>
       <activation>
         <property>
-          <name>custom</name>
+          <name>calendar</name>
         </property>
       </activation>
       <build>
@@ -133,7 +200,7 @@
           <plugin>
             <groupId>com.gzoltar</groupId>
             <artifactId>com.gzoltar.maven</artifactId>
-            <version>1.7.3-SNAPSHOT</version>
+            <version>1.7.2</version>
             <dependencies>
               <dependency>
                 <groupId>junit</groupId>
@@ -161,7 +228,7 @@
           <plugin>
             <groupId>com.gzoltar</groupId>
             <artifactId>com.gzoltar.maven</artifactId>
-            <version>1.7.3-SNAPSHOT</version>
+            <version>1.7.2</version>
             <dependencies>
               <dependency>
                 <groupId>junit</groupId>
@@ -200,4 +267,5 @@
     </profile>
 
   </profiles>
+
 </project>

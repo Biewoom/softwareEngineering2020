@@ -6,12 +6,12 @@ must be 'packaged' before running any of the usage examples described below,
 i.e., `mvn package` must be executed on the root directory.
 
 
-### Online instrumentation with custom test case executor
+### Online instrumentation with calendar test case executor
 
 ```
 mvn clean test-compile
-mvn -P custom -Dgzoltar.includes=org.gzoltar.examples.CharacterCounterTest#*:org.gzoltar.examples.StaticFieldTest#* gzoltar:list-test-methods
-mvn -P custom -Dgzoltar.offline=false -Dgzoltar.collectCoverage=true gzoltar:run-test-methods
+mvn -P calendar -Dgzoltar.includes=org.gzoltar.examples.CharacterCounterTest#*:org.gzoltar.examples.StaticFieldTest#* gzoltar:list-test-methods
+mvn -P calendar -Dgzoltar.offline=false -Dgzoltar.collectCoverage=true gzoltar:run-test-methods
 mvn gzoltar:fl-report
 ```
 
@@ -25,13 +25,13 @@ mvn gzoltar:fl-report
 ```
 
 
-### Offline instrumentation with custom test case executor
+### Offline instrumentation with calendar test case executor
 
 ```
 mvn clean test-compile
-mvn -P custom gzoltar:instrument
-mvn -P custom -Dgzoltar.includes=org.gzoltar.examples.CharacterCounterTest#*:org.gzoltar.examples.StaticFieldTest#* gzoltar:list-test-methods
-mvn -P custom -Dgzoltar.offline=true -Dgzoltar.collectCoverage=true gzoltar:run-test-methods
+mvn -P calendar gzoltar:instrument
+mvn -P calendar -Dgzoltar.includes=org.gzoltar.examples.CharacterCounterTest#*:org.gzoltar.examples.StaticFieldTest#* gzoltar:list-test-methods
+mvn -P calendar -Dgzoltar.offline=true -Dgzoltar.collectCoverage=true gzoltar:run-test-methods
 cp -R target/gzoltar-backup-classes/* target/classes
 mvn gzoltar:fl-report
 ```

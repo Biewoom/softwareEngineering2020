@@ -1,0 +1,6 @@
+#Config File Similar to Defects4J build properties file
+classes.modified=CalendarLogic
+dir.src.classes=src/main/java/calendar
+dir.src.tests=test/java/sketchFix
+tests.trigger=CalendarTest::testLeapYearGzoltar
+output.sketch=./demo/

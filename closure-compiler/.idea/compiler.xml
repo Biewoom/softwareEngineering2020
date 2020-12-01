@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="closure-compiler-gwt" />
+        <module name="closure-compiler-unshaded" />
+        <module name="closure-compiler-externs" />
+        <module name="closure-compiler" />
+        <module name="closure-compiler-linter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="closure-compiler" target="8" />
+      <module name="closure-compiler-externs" target="1.8" />
+      <module name="closure-compiler-gwt" target="1.7" />
+      <module name="closure-compiler-linter" target="1.8" />
+      <module name="closure-compiler-main" target="1.8" />
+      <module name="closure-compiler-parent" target="1.5" />
+      <module name="closure-compiler-unshaded" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="closure-compiler" options="-Xlint:unchecked,deprecation,fallthrough,finally" />
+      <module name="closure-compiler-externs" options="-Xlint:unchecked,deprecation,fallthrough,finally" />
+      <module name="closure-compiler-gwt" options="-Xlint:unchecked,deprecation,fallthrough,finally" />
+      <module name="closure-compiler-linter" options="-Xlint:unchecked,deprecation,fallthrough,finally" />
+      <module name="closure-compiler-unshaded" options="-Xlint:unchecked,deprecation,fallthrough,finally" />
+    </option>
+  </component>
+</project>
