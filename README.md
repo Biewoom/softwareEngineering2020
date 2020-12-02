@@ -1,4 +1,4 @@
-# Fuz zTesting => Fault Localization => Automatic bug fixing (with Simple example.)
+# Fuzz Testing => Fault Localization => Automatic bug fixing 
 
 
 # Introduction
