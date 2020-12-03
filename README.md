@@ -22,11 +22,11 @@ In this projectm we will use below tools.
 - So, after you clone this whole git repository, it is more convenient to open above project.
 
 # Part 1. JQF
-- Please refer to [this](../../wiki/JQF)
-
+- Refer to [this](../../wiki/JQF)
 # Part 2. Gzoltar
-
+- Refer to [this](../../wiki/Gzoltar)
 # Part 3. Sketch Fix
+- Refer to [this](../../wiki/sketchFix)
 
 ## previous reports
 [report 1 in Korean](https://www.notion.so/First-tutorial-Report-92b32785281b41edb2c13eb3e3342d58) </br>
