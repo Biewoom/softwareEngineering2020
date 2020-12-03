@@ -1,5 +1,3 @@
-# software Engineering Project
-
 ## Goal
 we will execute below workFlow, and figure out how to work with simple example(Calendar Logic).
 1. Fuzz-Testing
@@ -17,15 +15,15 @@ In this projectm we will use below tools.
 - Maven
 - Git
 
-# Part 0. Begin
+## Part 0. Begin
 - the main workplace is [com.gzoltar.maven.examples](./com.gzoltar.maven.examples)
 - So, after you clone this whole git repository, it is more convenient to open above project.
 
-# Part 1. JQF
+## Part 1. JQF
 - Refer to [this](../../wiki/JQF)
-# Part 2. Gzoltar
+## Part 2. Gzoltar
 - Refer to [this](../../wiki/Gzoltar)
-# Part 3. Sketch Fix
+## Part 3. Sketch Fix
 - Refer to [this](../../wiki/sketchFix)
 
 ## previous reports
