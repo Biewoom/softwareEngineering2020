@@ -19,7 +19,7 @@ In this projectm we will use below tools.
 
 # Part 0. Begin
 - the main workplace is [com.gzoltar.maven.examples](./com.gzoltar.maven.examples)
-- So, after you cloen this whole git repository, it is more convenient to open above project.
+- So, after you clone this whole git repository, it is more convenient to open above project.
 
 # Part 1. JQF
 
