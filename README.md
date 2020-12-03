@@ -27,5 +27,5 @@ In this projectm we will use below tools.
 - Refer to [this](../../wiki/sketchFix)
 
 ## previous reports
-[report 1 in Korean](https://www.notion.so/First-tutorial-Report-92b32785281b41edb2c13eb3e3342d58) </br>
-[report 2 in Korean](https://www.notion.so/GregorianTest-Gzoltar-sketchFix-report-daa831fdf802426b84a70245ba63487a)
+- [report 1 in Korean](https://www.notion.so/First-tutorial-Report-92b32785281b41edb2c13eb3e3342d58) </br>
+- [report 2 in Korean](https://www.notion.so/GregorianTest-Gzoltar-sketchFix-report-daa831fdf802426b84a70245ba63487a)
