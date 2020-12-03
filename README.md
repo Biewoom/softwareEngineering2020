@@ -22,7 +22,7 @@ In this projectm we will use below tools.
 - So, after you clone this whole git repository, it is more convenient to open above project.
 
 # Part 1. JQF
-- Please refer to [this](./wiki/JQF.md)
+- Please refer to [this](../wiki/JQF)
 
 # Part 2. Gzoltar
 
