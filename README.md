@@ -18,7 +18,7 @@ In this projectm we will use below tools.
 - Git
 
 # Part 0. Begin
-- the main workplace is [com.gzoltar.maven.example](../com.gzoltar.maven.example)
+- the main workplace is [com.gzoltar.maven.examples](../com.gzoltar.maven.examples)
 # Part 1. Fuzz testing
 
 # Part 2. Gzoltar
