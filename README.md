@@ -19,13 +19,13 @@ In this projectm we will use below tools.
 
 # Part 0. Begin
 - the main workplace is [com.gzoltar.maven.examples](./com.gzoltar.maven.examples)
-# Part 1. Fuzz testing
+- So, after you cloen this whole git repository, it is more convenient to open above project.
+- 
+# Part 1. JQF
 
 # Part 2. Gzoltar
 
-# Part 3. Fault localization
-
-# Part 4. Sketch Fix
+# Part 3. Sketch Fix
 
 ## previous reports
 [report 1](https://www.notion.so/First-tutorial-Report-92b32785281b41edb2c13eb3e3342d58) </br>
