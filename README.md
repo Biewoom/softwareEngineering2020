@@ -20,7 +20,7 @@ In this projectm we will use below tools.
 # Part 0. Begin
 - the main workplace is [com.gzoltar.maven.examples](./com.gzoltar.maven.examples)
 - So, after you cloen this whole git repository, it is more convenient to open above project.
-- 
+
 # Part 1. JQF
 
 # Part 2. Gzoltar
@@ -28,5 +28,5 @@ In this projectm we will use below tools.
 # Part 3. Sketch Fix
 
 ## previous reports
-[report 1](https://www.notion.so/First-tutorial-Report-92b32785281b41edb2c13eb3e3342d58) </br>
-[report 2](https://www.notion.so/GregorianTest-Gzoltar-sketchFix-report-daa831fdf802426b84a70245ba63487a)
+[report 1 in Korean](https://www.notion.so/First-tutorial-Report-92b32785281b41edb2c13eb3e3342d58) </br>
+[report 2 in Korean](https://www.notion.so/GregorianTest-Gzoltar-sketchFix-report-daa831fdf802426b84a70245ba63487a)
