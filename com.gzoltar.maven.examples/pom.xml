@@ -28,102 +28,34 @@
   </properties>
 
   <dependencies>
-    <!-- SketchFix -->
-    <dependency>
-      <groupId>com.sketch</groupId>
-      <artifactId>com.sketch.4j</artifactId>
-      <version>1.0.0</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/../com.sketchFix.test/lib/Sketch4J.jar</systemPath>
-    </dependency>
-    <dependency>
-      <groupId>com.sketch</groupId>
-      <artifactId>com.sketch.fix</artifactId>
-      <version>1.0.0</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/../com.sketchFix.test/lib/SketchFix.jar</systemPath>
-    </dependency>
-    <dependency>
-      <groupId>com.sketch</groupId>
-      <artifactId>com.javaparse</artifactId>
-      <version>1.0.0</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/../com.sketchFix.test/lib/javaparser-core-3.6.7.jar</systemPath>
-    </dependency>
-
-    <!-- Gzoltar -->
+    <!-- Junit -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>com.gzoltar</groupId>
-      <artifactId>com.gzoltar.agent</artifactId>
-      <classifier>runtime</classifier>
-      <version>1.7.3-SNAPSHOT</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.gzoltar</groupId>
-      <artifactId>com.gzoltar.cli</artifactId>
-      <version>1.7.3-SNAPSHOT</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/../com.gzoltar.cli/target/com.gzoltar.cli-1.7.3-SNAPSHOT-jar-with-dependencies.jar</systemPath>
-    </dependency>
-    <!-- JQF && pholse -->
-    <dependency>
-      <groupId>edu.berkeley.cs.jqf</groupId>
-      <artifactId>jqf</artifactId>
-      <version>1.6</version>
-      <type>pom</type>
-      <scope>test</scope>
-    </dependency>
 
     <dependency>
-      <groupId>edu.berkeley.cs.jqf</groupId>
-      <artifactId>jqf-fuzz</artifactId>
-      <version>1.6</version>
-      <scope>test</scope>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13</version>
+      <scope>compile</scope>
     </dependency>
 
+    <!-- GWT -->
     <dependency>
-      <groupId>com.pholser</groupId>
-      <artifactId>junit-quickcheck</artifactId>
-      <version>0.4</version>
-      <type>pom</type>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-user</artifactId>
+      <version>2.8.1</version>
       <scope>test</scope>
     </dependency>
-
-    <dependency>
-      <groupId>com.pholser</groupId>
-      <artifactId>junit-quickcheck-generators</artifactId>
-      <version>0.7</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>com.pholser</groupId>
-      <artifactId>junit-quickcheck-core</artifactId>
-      <version>0.9</version>
-      <scope>test</scope>
-    </dependency>
-
 
   </dependencies>
 
   <build>
     <defaultGoal>package</defaultGoal>
     <plugins>
-      <!-- jqf -->
-      <plugin>
-        <groupId>edu.berkeley.cs.jqf</groupId>
-        <artifactId>jqf-maven-plugin</artifactId>
-        <version>1.6</version>
-      </plugin>
-
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -133,139 +65,8 @@
           <target>${jdk.version}</target>
         </configuration>
       </plugin>
-
-      <plugin>
-        <groupId>com.gzoltar</groupId>
-        <artifactId>com.gzoltar.maven</artifactId>
-        <version>1.7.2</version>
-        <executions>
-          <execution>
-            <id>fl-report</id>
-            <goals>
-              <goal>fl-report</goal>
-            </goals>
-            <configuration>
-              <granularity>line</granularity>
-              <inclPublicMethods>true</inclPublicMethods>
-              <inclStaticConstructors>true</inclStaticConstructors>
-              <inclDeprecatedMethods>true</inclDeprecatedMethods>
-              <flFamilies>
-                <flFamily>
-                  <name>sfL</name>
-                  <formulas>
-                    <formula>barinel</formula>
-                    <formula>dstar</formula>
-                    <formula>ochiai</formula>
-                    <formula>tarantula</formula>
-                    <!--<formula>...</formula>-->
-                  </formulas>
-                  <metrics>
-                    <metric>rho</metric>
-                    <metric>ambiguity</metric>
-                    <metric>entropy</metric>
-                    <!--<metric>...</metric>-->
-                  </metrics>
-                  <formatters>
-                    <format implementation="com.gzoltar.report.fl.config.ConfigTxtReportFormatter" />
-                    <format implementation="com.gzoltar.report.fl.config.ConfigHTMLReportFormatter">
-                      <htmlViews>
-                        <htmlView>sunburst</htmlView>
-                        <htmlView>vertical_partition</htmlView>
-                        <!--<htmlView>...</htmlView>-->
-                      </htmlViews>
-                    </format>
-                  </formatters>
-                </flFamily>
-              </flFamilies>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
     </plugins>
   </build>
 
-  <profiles>
-    <!--
-      Custom test case executor
-    -->
-    <profile>
-      <id>calendar</id>
-      <activation>
-        <property>
-          <name>calendar</name>
-        </property>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>com.gzoltar</groupId>
-            <artifactId>com.gzoltar.maven</artifactId>
-            <version>1.7.2</version>
-            <dependencies>
-              <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.12</version>
-              </dependency>
-            </dependencies>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-
-    <!--
-      Maven-sufire test case executor
-    -->
-    <profile>
-      <id>sufire</id>
-      <activation>
-        <property>
-          <name>sufire</name>
-        </property>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>com.gzoltar</groupId>
-            <artifactId>com.gzoltar.maven</artifactId>
-            <version>1.7.2</version>
-            <dependencies>
-              <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.12</version>
-              </dependency>
-            </dependencies>
-          </plugin>
-
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0-M3</version>
-            <dependencies>
-              <dependency>
-                <groupId>org.apache.maven.surefire</groupId>
-                <artifactId>surefire-junit47</artifactId>
-                <version>3.0.0-M3</version>
-              </dependency>
-            </dependencies>
-            <configuration>
-              <testFailureIgnore>true</testFailureIgnore>
-              <systemPropertyVariables>
-                <gzoltar-agent.destfile>${project.build.directory}/gzoltar.ser</gzoltar-agent.destfile>
-              </systemPropertyVariables>
-              <properties>
-                <property>
-                  <name>listener</name>
-                  <value>com.gzoltar.internal.core.listeners.JUnitListener</value>
-                </property>
-              </properties>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-
-  </profiles>
 
 </project>
