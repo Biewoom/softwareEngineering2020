@@ -22,10 +22,10 @@ In this projectm we will use below tools.
 ## Part 1. JQF
 - Refer to [this](../../wiki/JQF)
 ## Part 2. Gzoltar
-- Before Do Gzoltar, Please do JQF.
+- Before do Gzoltar, Please do JQF.
 - Refer to [this](../../wiki/Gzoltar)
 ## Part 3. Sketch Fix
-- Before Do sketchFix, Please do JQF and Gzoltar
+- Before do sketchFix, Please do JQF and Gzoltar
 - Refer to [this](../../wiki/sketchFix)
 
 ## previous reports
